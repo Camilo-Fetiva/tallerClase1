@@ -19,5 +19,11 @@ app.use('/usuarios', usersRouter);
 app.use('/iniciarSesion', loginRouter);
 
 
-export default app;
+// PETICION GET (para mensaje de conexion)
+app.get(
+    '/', 
+    (req, res)=>
+        res.send('Conexion con backend funcionando correctamente'),
+);
 
+export default app;
